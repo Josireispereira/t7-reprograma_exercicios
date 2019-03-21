@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulários</title>
+
+    </head>
+
+    <body>
+        <h1>Preencha aqui</h1>
+
+        <section>
+
+            <form action="sucesso.html" method="POST">
+                <div>
+                    <label for="nome-da-pessoa">Seu Nome</label>
+                    <input type="text" placeholder="Escreva seu nome" name="nome-da-pessoa">
+                </div>
+
+                <div>
+                    <label for="senha-da-pessoa">Sua senha</label>
+                    <input type="password" placeholder="Digite sua senha" name="senha-da-pessoa">
+                </div>
+                
+                <div>
+                    <label>Seu email</label>
+                    <input type="email" placeholder="Digite seu email">
+                </div>
+                
+                <div>
+                    <label for="idade-da-pessoa">Sua idade</label>
+                    <input type="number" placeholder="Digite sua idade" name="idade-da-pessoa">
+                </div>
+                <div>
+                    <label for="usuaria-talentosa">Declaro que sou muito talentosa</label>
+                    <input type="checkbox" name="usuaria-talentosa">
+                </div>
+
+                <div>
+                    <label for="area-de-interesse">Áreas de interesse</label>
+
+                    <input type="checkbox" name="area-de-interesse" value="tecnologia"><span>Tecnologia</span>
+                    <input type="checkbox" name="area-de-interesse" value="arquitetura"><span>Arquitetura</span>
+                    <input type="checkbox" name="area-de-interesse" value="design"><span>Design</span>
+                </div>
+                <div>
+                    <label for="profissao">Selecione o que você faz:</label>
+
+                    <input type="radio" name="profissao" value="programadora"><span>Programadora</span>
+
+                    <input type="radio" name="profissao" value="Designer"> <span>Designer</span>
+
+                    <input type="radio" name="profissao" value="Arquiteta"><span>Arquiteta</span>
+                </div>
+
+                <div>
+                    <label for="cidade-da-pessoa">Sua cidade:</label>
+                    <select name="cidada-da-pessoa">
+                        <option value="sao-paulo">São Paulo</option>
+                        <option value="rio-de-janeiro">Rio de Janeiro</option>
+                        <option value="ribeirao-pires">Ribeirão Pires</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="vida">Conte sua vida:</label>
+                    <textarea name="vida" rows="3" placeholder="Estudei na Reprograma"></textarea>
+                </div>
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </body>
+</html>
