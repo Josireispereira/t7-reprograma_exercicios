@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+}
+
+button {
+  margin: 5px;
+  width: 200px;
+  height: 45px;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.grande {
+  padding: 0px 50px;
+}
+
+.pequeno {
+  padding: 0px 30px;
+  font-size: 12px;
+  width: 165px;
+  height: 35px;
+}
+
+.roxo {
+  background-color: rgb(143, 0, 179);
+  color: white;
+}
+
+.roxo-claro {
+  background-color: rgb(219, 188, 231);
+  color: rgb(143, 0, 179);
+}
+
+.branco-c-borda {
+  background-color: rgb(255, 255, 255);
+  color: rgb(143, 0, 179);
+  border: solid 3px rgb(143, 0, 179);
+}
