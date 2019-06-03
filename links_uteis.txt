@@ -1,0 +1,19 @@
+Curso JS e React gratuitos
+https://rocketseat.com.br/starter
+
+Curso de UX
+https://pt.coursera.org/specializations/ui-ux-design
+
+Entender Objeto no JS
+https://developer.mozilla.org/pt-BR/docs/Aprender/JavaScript/Objetos/Object-oriented_JS
+
+Entender Instância
+https://www.guj.com.br/t/oque-e-instancia/28009/2
+
+Entender POO em Python
+https://penseallen.github.io/PensePython2e/15-classes-objetos.html
+https://penseallen.github.io/PensePython2e/
+
+Crie arquivos .gitignore úteis para o seu projeto
+https://www.gitignore.io/
+
