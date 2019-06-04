@@ -1,0 +1,65 @@
+body {
+    font-family: sans-serif;
+}
+
+tbody > tr:nth-child(even) {
+    background-color: #DFDFDF;
+}
+
+.planos { /* classe da table*/
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-bottom: 1px solid #CCC;
+    text-align: center;
+}
+
+.autonomo {
+    background-color: #0078c1;
+}
+
+.pequenas-empresas {
+    background-color: rgb(20, 199, 71);
+}
+
+tr td:first-child {
+    text-align: left;
+    padding: 5px;
+}
+
+th, td, tr {
+    border-right: 1px solid #CCC;
+}
+
+.cabecalho th {
+    font-size: 12px;
+    color: #ffffff;
+    padding: 10px;
+}
+
+.cabecalho-2 th {
+    padding: 10px 0 0 0;
+}
+
+.comprar {
+    border: none;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 10%;
+    background-color: rgb(255, 6, 6);
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.linha-botoes > th {
+    padding: 10px 0;
+    border-top: none;
+}
+
+.check-azul {
+    color: #0c6297;
+}
+
+.check-verde {
+    color:  rgb(47, 153, 28);
+}

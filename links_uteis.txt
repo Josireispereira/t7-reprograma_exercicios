@@ -17,3 +17,8 @@ https://penseallen.github.io/PensePython2e/
 Crie arquivos .gitignore úteis para o seu projeto
 https://www.gitignore.io/
 
+Código de ícones
+https://fontawesome.com/
+
+Como melhorar o SEO do seu site
+https://varvy.com/

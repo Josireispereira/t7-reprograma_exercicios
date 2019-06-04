@@ -38,3 +38,8 @@ button {
   color: rgb(143, 0, 179);
   border: solid 3px rgb(143, 0, 179);
 }
+
+.fa-plus-circle:before {
+  content: "\f055";
+  margin: 5px;
+}
