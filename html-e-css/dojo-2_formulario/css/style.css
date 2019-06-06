@@ -26,3 +26,28 @@
 .grupo-campo > select {
     width: 54%;
 }
+
+.btn{
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+   
+
+}
+
+.btn--submit{
+  
+ 
+    background-color: rgb(231, 24, 250);
+}
+
+
+.btn--submit:hover{
+    background-color: rgb(247, 239, 240);
+}
+
+input:focus{
+    border: 4px solid #720d6a
+
+}

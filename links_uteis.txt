@@ -22,3 +22,9 @@ https://fontawesome.com/
 
 Como melhorar o SEO do seu site
 https://varvy.com/
+
+Testar chamadas de API passando objetos fantasmas
+https://jsonplaceholder.typicode.com/
+
+Testar se o API tá retornando obj
+https://www.getpostman.com/
