@@ -23,8 +23,25 @@ https://fontawesome.com/
 Como melhorar o SEO do seu site
 https://varvy.com/
 
+bootstrap oppensource
+https://bulma.io/
+
 Testar chamadas de API passando objetos fantasmas
 https://jsonplaceholder.typicode.com/
 
 Testar se o API tá retornando obj
 https://www.getpostman.com/
+
+PWA é o futuro? Melhor que baixar milhares de aplicativos!
+https://www.opus-software.com.br/o-que-e-pwa/
+
+Abreviações de HTML e afins
+https://docs.emmet.io/abbreviations/syntax
+
+Processing!!!
+https://processing.org/
+https://garoa.net.br/wiki/Noite_de_Processing
+
+Nerdzão
+WoMakersCode
+NodeBR e JSSP, VUEJSSP
