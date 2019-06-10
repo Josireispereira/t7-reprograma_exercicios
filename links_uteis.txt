@@ -41,7 +41,24 @@ https://docs.emmet.io/abbreviations/syntax
 Processing!!!
 https://processing.org/
 https://garoa.net.br/wiki/Noite_de_Processing
+https://discourse.processing.org/
+
+Livro de Scrum
+http://lelivros.love/book/baixar-livro-scrum-a-arte-de-fazer-o-dobro-de-trabalho-na-metade-do-tempo-jeff-sutherland-em-pdf-epub-e-mobi-ou-ler-online/
+
+O que é arquitetura de software?
+https://msdn.microsoft.com/pt-br/hh144976.aspx
+
+JSX
+https://medium.com/@milfont/jsx-a-resposta-do-react-pra-resolver-definitivamente-um-problema-99f572316eb5
 
 Nerdzão
 WoMakersCode
 NodeBR e JSSP, VUEJSSP
+
+VS Code > aqr > pref > config > pesquisar Terminal e achar "Terminal › External: Windows Exec", colar o endereço do arquivo git bash e reiniciar o VSC
+C:\Users\Renomear.DESKTOP-BS0U13S\AppData\Local\Programs\Git\git-bash.exe
+
+npx create-react-app primeiro-proj
+cd my-app
+npm start
