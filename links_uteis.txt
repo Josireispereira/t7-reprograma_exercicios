@@ -52,6 +52,15 @@ https://msdn.microsoft.com/pt-br/hh144976.aspx
 JSX
 https://medium.com/@milfont/jsx-a-resposta-do-react-pra-resolver-definitivamente-um-problema-99f572316eb5
 
+React Dev Tools
+https://addons.mozilla.org/pt-BR/firefox/addon/react-devtools/
+
+OUTREACHY
+https://www.outreachy.org/
+
+Projeto que Bia participou
+https://webcompat.com/
+
 Nerdzão
 WoMakersCode
 NodeBR e JSSP, VUEJSSP
