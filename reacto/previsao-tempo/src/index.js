@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import './App.css';
 import * as serviceWorker from './serviceWorker';
+import Previsao from "./componentes/Previsao";
 
 const previsao01 = {
     data: '31/05/2019',
@@ -23,44 +23,6 @@ const previsao02 = {
         min: '18°C',
     }
 }
-
-Titulo = (props) => {
-    return (
-        <div>
-            <h1 className="previsao__data">{props.data1}</h1>
-            <p className="previsao__resumo">{props.resumo1}</p>
-        </div>
-    )
-}
-
-class Previsao extends React.Component {
-    render() {
-        return (
-            <div className="previsao">
-                < Titulo
-                    data1={this.props.data}
-                    resumo1={this.props.resumo}
-                />
-
-                //criar outros dois componentes: Imagem e Temperatura
-                <h1 className="previsao__data">{this.props.data}</h1>
-                <p className="previsao__resumo">{this.props.resumo}</p>
-                <img className="previsao__img" src={this.props.imagem}></img>
-                <table className="previsao-temperatura">
-                    <tr className="previsao-temperatura__linha">
-                        <th>Máxima</th>
-                        <td>{this.props.temperatura.max}</td>
-                    </tr>
-                    <tr className="previsao-temperatura__linha">
-                        <th>Mínima</th>
-                        <td>{this.props.temperatura.min}</td>
-                    </tr>
-                </table>
-            </div>
-        )
-    }
-}
-
 
 class Container extends React.Component {
     render() {
