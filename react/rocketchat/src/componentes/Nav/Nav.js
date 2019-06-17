@@ -1,6 +1,6 @@
 import React from 'react';
 import Menu from './Menu/Menu'
-import Logo from '../../imagem/RocketChat.png';
+import Logo from '../../Imagem/RocketChat.png';
 import '../Nav/Nav.css';
 
 export default function Nav(props) {

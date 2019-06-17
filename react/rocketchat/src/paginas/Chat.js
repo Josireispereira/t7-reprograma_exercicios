@@ -1,9 +1,9 @@
 import React from 'react';
 
-Chat = (props) => {
+function Chat (props) {
     return(
         <div>
-            <p>funfaaaa</p>
+            <p>Você está no Chat!</p>
         </div>
     )
 }

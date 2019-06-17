@@ -1,5 +1,6 @@
 import React from 'react';
 import './Menu.css';
+import {Link} from 'react-router-dom';
 
 export default class Menu extends React.Component {
     constructor(props) {
@@ -27,9 +28,9 @@ export default class Menu extends React.Component {
             <div className='navbar-menu navbar-links'>
                 <a className={classeDoBotao} onClick='{this.AbreFecha}'>Menu</a>
                 <ul className={classeDasOpcoes}>
-                    <li>Home</li>
-                    <li>Cadastro</li>
-                    <li>Chat</li>
+                    <li><Link to='/' className='navbar-links__ativo'>Home</Link></li>
+                    <li><Link to='/cadastro' className='navbar-links__ativo'>Cadastro</Link></li>
+                    <li><Link to='/chat' className='navbar-links__ativo'>Chat</Link></li>
                 </ul>
             </div>
         )

@@ -1,8 +1,11 @@
 import React from 'react';
+import './Home.css';
 
-function Home (props) {
+function Home (props){
     return(
-        <p>A era da comunicação intergalática</p>
+        <section className='home-header'>
+            <h1>A era da comunicação intergalática</h1>
+        </section>
     )
 }
 
