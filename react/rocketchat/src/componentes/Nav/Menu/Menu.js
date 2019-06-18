@@ -22,6 +22,7 @@ export default class Menu extends React.Component {
         if(this.state.aberto) {
             classeDasOpcoes += ' navbar-menu__opcoes--aberto'
             classeDoBotao += ' navbar-menu__botao--aberto'
+            // esse espaço antes das novas classes é para concatenar as duas sem juntar as palavras
         }
 
         return (
@@ -31,6 +32,7 @@ export default class Menu extends React.Component {
                     <li><Link to='/' className='navbar-links__ativo'>Home</Link></li>
                     <li><Link to='/cadastro' className='navbar-links__ativo'>Cadastro</Link></li>
                     <li><Link to='/chat' className='navbar-links__ativo'>Chat</Link></li>
+                    //o link to é no lugar do href
                 </ul>
             </div>
         )
