@@ -1,6 +1,7 @@
 import React from 'react';
 import Legenda from '../../componentes/Formulario/legenda';
 import CaixaTexto from '../../componentes/Formulario/CaixaTexto';
+import BotaoSubmit from '../../componentes/Formulario/BotaoSubmit';
 
 class PessoaFisica extends React.Component {
     constructor(props) {
@@ -65,6 +66,8 @@ class PessoaFisica extends React.Component {
                             name='nomeSobrenome'
                             value={this.state.nomeSobrenome}
                             onChange={this.handleChange} />
+                        < BotaoSubmit desabilitado={} acaoBotao={this.handleSubmit} className='botao'>
+                        </BotaoSubmit>
                     </div>
                     <div>
                         <Legenda
