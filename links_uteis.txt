@@ -52,26 +52,44 @@ https://msdn.microsoft.com/pt-br/hh144976.aspx
 JSX
 https://medium.com/@milfont/jsx-a-resposta-do-react-pra-resolver-definitivamente-um-problema-99f572316eb5
 
-React Dev Tools
+React Dev Tools (no inspecionar)
 https://addons.mozilla.org/pt-BR/firefox/addon/react-devtools/
 
 OUTREACHY
 https://www.outreachy.org/
 
+React Router
+https://reacttraining.com/react-router/web/guides/quick-start
+
+Material Design
+https://www.npmjs.com/package/@material-ui/core
+
+Ant Design
+https://ant.design/docs/react/introduce
+
+React-bootstrap
+https://react-bootstrap.github.io/getting-started/introduction
+
+Axios
+https://www.npmjs.com/package/axios
+
 Projeto que Bia participou
 https://webcompat.com/
-
 email dela breatriz.rizental@gmail.com
 
 Mind Mapping pro porj final
 
+Comunidades
 Nerdzão
 WoMakersCode
 NodeBR e JSSP, VUEJSSP
 
+Trocar o terminal para o git bash
 VS Code > aqr > pref > config > pesquisar Terminal e achar "Terminal › External: Windows Exec", colar o endereço do arquivo git bash e reiniciar o VSC
 C:\Users\Renomear.DESKTOP-BS0U13S\AppData\Local\Programs\Git\git-bash.exe
 
-npx create-react-app primeiro-proj
-cd my-app
-npm start
+Tema bonito e bold
+Eva Theme Bold
+
+Formatar documento em css e js
+CSS Formatter
