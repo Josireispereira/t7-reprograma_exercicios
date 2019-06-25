@@ -92,4 +92,25 @@ Tema bonito e bold
 Eva Theme Bold
 
 Formatar documento em css e js
-CSS Formatter
+Plugin CSS Formatter
+
+Regex tester
+https://regex101.com/
+
+JSON server
+https://my-json-server.typicode.com/
+
+Styled Components
+https://www.styled-components.com/
+
+www
+https://webfoundation.org/
+
+Refs e o DOM
+https://pt-br.reactjs.org/docs/refs-and-the-dom.html
+
+Codesandbox e exemplo de refDom
+https://codesandbox.io/s/boring-cdn-ix3j0
+
+Scratch
+https://scratch.mit.edu/
