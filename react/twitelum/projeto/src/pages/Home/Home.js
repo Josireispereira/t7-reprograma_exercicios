@@ -59,9 +59,10 @@ class Home extends Component {
                             <div className="tweetsArea">
 
                                 {this.state.tweets.length > 0 ?
+                                // map ((item, i de index)) costuma ser assim
                                     this.state.tweets.map((elemento, index) => {
                                         return <Tweet texto={elemento} key={index} />
-                                    }) : <p> Compartilhe seu primeiro Tweet.</p>
+                                    }) : <p> Compartilhe seu primeiro Tweet!</p>
                                 }
 
                             </div>

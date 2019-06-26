@@ -7,6 +7,9 @@ import './loginPage.css'
 class LoginPage extends Component {
     constructor(props) {
         super(props)
+        this.state = {
+            aparecer: false
+        }
     }
 
     fazerLogin = (e) => {
@@ -27,20 +30,27 @@ class LoginPage extends Component {
                 //   console.log(resp)
                 return resp.json()
             })
+            // Esse segundo then serve para conseguir pegar em variável o retorno com os JSONS
             .then((respJson) => {
                 console.log('then ok', respJson)
+                // fazemos o controle se usuário está logado pelo token
                 localStorage.setItem('TOKEN', respJson.token)
+                // redireciona para a Home, isso é do router DOM
                 this.props.history.push('/')
             })
             .catch((err) => {
                 err.json()
-                    .then(respo => console.log('catch', respo))
+                    .then(res => {
+                        this.setState({
+                            aparecer:true
+                        })
+                        // alert(res.message)
+                    })
             })
-
     }
 
     render() {
-
+        
         return (
             <Fragment>
                 <Cabecalho />
@@ -68,9 +78,10 @@ class LoginPage extends Component {
                                         ref={(elemento) => { this.inputSenha = elemento }}
                                     />
                                 </div>
-                                <div className="loginPage__errorBox">
-                                    Mensagem de erro!
-                                </div>  /////////////////
+                                { this.state.aparecer === true ? <div className="loginPage__errorBox">
+                                  Mensagem de erro!
+                                  </div> : ''
+                                }
                                 <div className="loginPage__inputWrap">
                                     <button className="loginPage__btnLogin" type="submit">
                                         Logar
