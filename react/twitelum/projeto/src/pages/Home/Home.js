@@ -5,6 +5,7 @@ import Dashboard from '../../components/Dashboard'
 import Widget from '../../components/Widget'
 import TrendsArea from '../../components/TrendsArea'
 import Tweet from '../../components/Tweet'
+import { postTweet, postTweets } from '../../services/tweets'
 
 class Home extends Component {
     constructor() {
@@ -17,13 +18,23 @@ class Home extends Component {
 
     adicionaTweet = (event) => {
         event.preventDefault();
-        // const novoTweet = this.state.novoTweet
-        // const anteriores = this.state.tweets
-        this.setState(stateAnterior => ({
-            tweets: [stateAnterior.novoTweet, ...stateAnterior.tweets],
-            novoTweet: ''
-        }))
-    }
+        
+        const postarnovoTweet = {
+            conteudo: this.state.novoTweet,
+        }
+       
+        postTweets(postarnovoTweet, localStorage.getItem('TOKEN'))
+
+    //     fetch('http://localhost:3001', {
+    //         method: 'POST',
+    //         body: JSON.stringify(postTweet)
+    //     })
+    //     .then(response => 
+    //         response.json()
+    //         )
+    //     .then(responseJson => 
+    //         console.log(responseJson))
+    // }
     render() {
 
         return (

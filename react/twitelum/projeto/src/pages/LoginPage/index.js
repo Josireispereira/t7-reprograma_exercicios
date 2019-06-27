@@ -8,7 +8,8 @@ class LoginPage extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            aparecer: false
+            aparecer: false,
+            mensagem: ''
         }
     }
 
@@ -41,16 +42,17 @@ class LoginPage extends Component {
             .catch((err) => {
                 err.json()
                     .then(res => {
+                        //console.log(erro)
                         this.setState({
-                            aparecer:true
+                            aparecer:true,
+                            mensagem: res.message
                         })
-                        // alert(res.message)
                     })
             })
     }
 
     render() {
-        
+        console.log('state', this.state)
         return (
             <Fragment>
                 <Cabecalho />
@@ -78,8 +80,8 @@ class LoginPage extends Component {
                                         ref={(elemento) => { this.inputSenha = elemento }}
                                     />
                                 </div>
-                                { this.state.aparecer === true ? <div className="loginPage__errorBox">
-                                  Mensagem de erro!
+                                {this.state.aparecer === true ? <div className="loginPage__errorBox"> 
+                                 {this.state.mensagem}
                                   </div> : ''
                                 }
                                 <div className="loginPage__inputWrap">
