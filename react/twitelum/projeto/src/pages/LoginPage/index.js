@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react'
 import Cabecalho from '../../components/Cabecalho'
 import Widget from '../../components/Widget'
-import './loginPage.css'
 
+import './loginPage.css'
 
 class LoginPage extends Component {
     constructor(props) {
@@ -19,41 +19,47 @@ class LoginPage extends Component {
             login: this.inputLogin.value,
             senha: this.inputSenha.value
         }
-        console.log(dadosDeLogin)
-        // a ordem do fetch é: rota, dados da requisição com método http e dados
+         console.log(dadosDeLogin)
+
         fetch('http://localhost:3001/login', {
             method: 'POST',
             body: JSON.stringify(dadosDeLogin)
         })
             .then(resp => {
+                console.log('resp', resp)
+                //chega como Response 
                 if (!resp.ok)
-                    throw resp;
-                //   console.log(resp)
+                    throw resp; // throw envia a resposta pro catch e pula o then
+
+                //.json() pega só a resposta do back
+                //Tipo Promise: precisamos fazer outro then pra capturar o valor
                 return resp.json()
             })
-            // Esse segundo then serve para conseguir pegar em variável o retorno com os JSONS
             .then((respJson) => {
-                console.log('then ok', respJson)
-                // fazemos o controle se usuário está logado pelo token
+                const inputDoNome = 
+                //se a reposta for 200 OK 
+                //peguei o retorno do back e consigo usar como variável
+                // console.log('resp OK', respJson)
                 localStorage.setItem('TOKEN', respJson.token)
-                // redireciona para a Home, isso é do router DOM
+                localStorage.setItem('NOME', dadosDeLogin.login )
                 this.props.history.push('/')
             })
             .catch((err) => {
+                //.json() pega só a resposta do back
+                //Tipo Promise: precisamos fazer outro .then pra capturar o valor
                 err.json()
                     .then(res => {
-                        //console.log(erro)
                         this.setState({
-                            aparecer:true,
+                            aparecer: true,
                             mensagem: res.message
                         })
-                    })
+                    }
+                    )
             })
     }
 
     render() {
-        console.log('state', this.state)
-        return (
+         return (
             <Fragment>
                 <Cabecalho />
                 <div className="loginPage">
@@ -64,26 +70,25 @@ class LoginPage extends Component {
                                 <div className="loginPage__inputWrap">
                                     <label className="loginPage__label" htmlFor="login">Login</label>
                                     <input
+                                        ref={(elemento) => {
+                                            this.inputLogin = elemento
+                                        }}
                                         className="loginPage__input"
                                         type="text"
                                         id="login"
-                                        name="login"
-                                        ref={(elementoInput) => { this.inputLogin = elementoInput }} />
+                                        name="login" />
                                 </div>
                                 <div className="loginPage__inputWrap">
                                     <label className="loginPage__label" htmlFor="senha">Senha</label>
-                                    <input
-                                        className="loginPage__input"
-                                        type="password"
-                                        id="senha"
-                                        name="senha"
-                                        ref={(elemento) => { this.inputSenha = elemento }}
+                                    <input className="loginPage__input"
+                                        type="password" id="senha" name="senha"
+                                        ref={(elemento) => this.inputSenha = elemento}
                                     />
                                 </div>
-                                {this.state.aparecer === true ? <div className="loginPage__errorBox"> 
-                                 {this.state.mensagem}
-                                  </div> : ''
-                                }
+
+                                {this.state.aparecer === true ? <div className="loginPage__errorBox">
+                                    {this.state.mensagem}
+                            </div> : ''}
                                 <div className="loginPage__inputWrap">
                                     <button className="loginPage__btnLogin" type="submit">
                                         Logar

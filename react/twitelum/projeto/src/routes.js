@@ -1,12 +1,13 @@
-import React from "react";
-import { Switch, Route, Redirect } from 'react-router-dom';
+import React from 'react'
+import { Switch, Route, Redirect } from 'react-router-dom'
 
-// páginas
-import Home from "./pages/Home/Home";
-import LoginPage from './pages/LoginPage';
 
-function estaAutenticado(){
-    if(localStorage.getItem('TOKEN')){
+//Páginas
+import Home from './pages/Home/Home'
+import LoginPage from './pages/LoginPage'
+
+function estAutenticado() {
+    if (localStorage.getItem('TOKEN')) {
         return true
     }
     else {
@@ -14,30 +15,30 @@ function estaAutenticado(){
     }
 }
 
-// ou ternário! localStorage.getItem('TOKEN') === true ? 'aeee' : false ''
-
 class PrivateRoute extends React.Component {
-    render(){ 
+    render() {
         const Componente = this.props.component
-        console.log(this.props)
-        if(estaAutenticado()){
-            // componentes do tweets
-            return <Route render={() => (<Componente{...this.props}></Componente>)}></Route> 
+        //Home
+        //console.log(this.props)
+        if (estAutenticado() === true) {
+            // componente rota tweets
+            return <Route render={() => <Componente {...this.props}></Componente>}></Route>
+            // <Route exact={this.props.exact} path={this.props.path} component={this.props.component}>  </Route>
         }
-        else{
-            //componentes do login
-            return <Redirect to='/login'></Redirect>
+        else {
+            // rota login
+            return <Redirect to="/login"></Redirect>
         }
     }
 }
-
 const Roteamento = () => {
-    return(
+    return (
         <Switch>
+            {/* <Route exact path="/" component={Home} /> */}
             <PrivateRoute exact path="/" component={Home} />
             <Route path="/login" component={LoginPage} />
         </Switch>
     )
 }
 
-export default Roteamento;
+export default Roteamento

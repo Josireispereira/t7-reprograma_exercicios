@@ -5,5 +5,4 @@ const configuracoes = {
 }
 
 const protocolo = axios.create(configuracoes)
-
 export default protocolo

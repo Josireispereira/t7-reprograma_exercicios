@@ -5,42 +5,45 @@ import Dashboard from '../../components/Dashboard'
 import Widget from '../../components/Widget'
 import TrendsArea from '../../components/TrendsArea'
 import Tweet from '../../components/Tweet'
-import { postTweet, postTweets } from '../../services/tweets'
+import { postTweets } from '../../services/tweets'
 
 class Home extends Component {
     constructor() {
         super();
         this.state = {
             novoTweet: '',
-            tweets: []
+            tweets: [ ]
         }
     }
 
     adicionaTweet = (event) => {
         event.preventDefault();
-        
-        const postarnovoTweet = {
+
+        const postarNovoTweet = {
             conteudo: this.state.novoTweet,
         }
-       
-        postTweets(postarnovoTweet, localStorage.getItem('TOKEN'))
 
-    //     fetch('http://localhost:3001', {
-    //         method: 'POST',
-    //         body: JSON.stringify(postTweet)
-    //     })
-    //     .then(response => 
-    //         response.json()
-    //         )
-    //     .then(responseJson => 
-    //         console.log(responseJson))
-    // }
+        postTweets(postarNovoTweet, localStorage.getItem('TOKEN'))
+        .then(resposta => {
+            console.log(resposta.data)
+            this.setState(stateAnterior => ({
+                tweets: [resposta.data, ...stateAnterior.tweets],
+                novoTweet: ''
+            }))
+        })
+    }
+    
+    removeTweet = (idRecebido) => {
+        console.log(testFilter)
+        const testFilter = this.state.tweets.filter(lista => lista._id !== idRecebido)
+    }
+
     render() {
-
+       // console.log('tweets', this.state.tweets)
         return (
             <Fragment>
                 <Cabecalho>
-                    <NavMenu usuario="@brunavieirat" />
+                    <NavMenu usuario='josireis'/>
                 </Cabecalho>
                 <div className="container">
                     <Dashboard>
@@ -70,10 +73,9 @@ class Home extends Component {
                             <div className="tweetsArea">
 
                                 {this.state.tweets.length > 0 ?
-                                // map ((item, i de index)) costuma ser assim
-                                    this.state.tweets.map((elemento, index) => {
-                                        return <Tweet texto={elemento} key={index} />
-                                    }) : <p> Compartilhe seu primeiro Tweet!</p>
+                                    this.state.tweets.map((elemento) => {
+                                        return <Tweet {...elemento} key={elemento._id} remove={this.removeTweet} />
+                                    }) : <p> Compartilhe seu primeiro Tweet.</p>
                                 }
 
                             </div>
