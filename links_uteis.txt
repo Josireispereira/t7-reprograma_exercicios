@@ -114,3 +114,21 @@ https://codesandbox.io/s/boring-cdn-ix3j0
 
 Scratch
 https://scratch.mit.edu/
+
+React training
+https://reacttraining.com/
+
+React Hooooook
+https://pt-br.reactjs.org/docs/hooks-intro.html
+
+Fullstack React - 30 days of react
+https://www.fullstackreact.com/30-days-of-react/
+
+BHCult
+http://www.bhcult.com.br/
+
+Sites bem legais
+https://yuenye.com/contact/
+https://reflektor.digital/
+
+
